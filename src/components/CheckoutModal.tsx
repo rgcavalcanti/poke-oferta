@@ -37,10 +37,9 @@ const Title = styled.p`
   font-weight: 500;
   text-align: center;
 
-  ${({theme}) => theme.media.tablet} {
+  ${({ theme }) => theme.media.tablet} {
     font-size: 3rem;
   }
-
 `;
 
 const Text = styled.p`
@@ -48,7 +47,7 @@ const Text = styled.p`
   font-size: 1rem;
   text-align: center;
 
-  ${({theme}) => theme.media.tablet} {
+  ${({ theme }) => theme.media.tablet} {
     font-size: 1.25rem;
   }
 `;
@@ -77,7 +76,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.contrast};
   }
 
-  ${({theme}) => theme.media.tablet} {
+  ${({ theme }) => theme.media.tablet} {
     font-size: 1.5rem;
   }
 `;

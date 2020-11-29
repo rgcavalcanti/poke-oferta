@@ -17,6 +17,7 @@ const Cart = styled.aside<{ show: boolean }>`
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-flow: column;
+  padding-bottom: 2rem;
 
   ${({ theme }) => theme.media.laptop} {
     position: static;
@@ -103,8 +104,8 @@ const ShoppingCart: React.FC = () => {
   };
 
   useEffect(() => {
-    document.body.style.overflow = showCart ? "hidden" : "initial";
-  }, [showCart]);
+    document.body.style.overflow = showCart || showCheckoutModal ? "hidden" : "initial";
+  }, [showCart, showCheckoutModal]);
 
   return (
     <>
