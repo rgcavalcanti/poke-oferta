@@ -1,4 +1,3 @@
-import { IndexPokemonParams } from "data/usecases/IndexPokemonUseCase";
 import { Pokemon } from "domain/entities/Pokemon";
 import { IndexPokemon } from "presenters/IndexPokemon";
 import { createContext, useContext, useState } from "react";
