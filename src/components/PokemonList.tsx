@@ -30,7 +30,7 @@ const List = styled.ul`
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  ${({ theme }) => theme.media.laptop} {
+  ${({ theme }) => theme.media.laptopL} {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;

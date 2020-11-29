@@ -28,19 +28,29 @@ const Modal = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  width: 90%;
   max-width: ${({ theme }) => theme.device.sizes.tablet};
 `;
 
 const Title = styled.p`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   text-align: center;
+
+  ${({theme}) => theme.media.tablet} {
+    font-size: 3rem;
+  }
+
 `;
 
 const Text = styled.p`
   font-family: ${({ theme }) => theme.font.secondary};
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
+
+  ${({theme}) => theme.media.tablet} {
+    font-size: 1.25rem;
+  }
 `;
 
 const Close = styled.button`
@@ -66,6 +76,10 @@ const Button = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors.contrast};
   }
+
+  ${({theme}) => theme.media.tablet} {
+    font-size: 1.5rem;
+  }
 `;
 
 type Props = {
@@ -85,7 +99,7 @@ const CheckoutModal: React.FC<Props> = ({ onClose }) => {
           </Close>
         </Link>
         <Title>Obrigado!</Title>
-        <Image width="200" height="200" src="/images/pokemon_coin.png" />
+        <Image width="150" height="150" src="/images/pokemon_coin.png" />
         <Text>
           Temos que pegar todos eles! Pensando nisso a Poke Orferta está te
           devolvendo parte do valor para você poder comprar mais pokémon e se

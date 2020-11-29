@@ -94,6 +94,7 @@ const ShoppingCart: React.FC = () => {
 
   const openCheckoutModal = (): void => {
     setShowCheckoutModal(true);
+    toggleCart();
   };
 
   const handleCloseCheckoutModal = (): void => {
