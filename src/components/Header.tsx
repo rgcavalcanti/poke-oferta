@@ -2,15 +2,18 @@ import { useCart } from "contexts/cart";
 import Link from "next/link";
 import styled from "styled-components";
 
-import BasketIcon from "../icons/icon_shopping_basket.svg";
+import BasketIcon from "icons/icon_shopping_basket.svg";
 
 const Bar = styled.header`
   background-color: ${({ theme }) => theme.colors.main};
   padding: 0 1rem;
-  height: 60px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: -60px;
+  z-index: 100;
 `;
 
 const Title = styled.p`
@@ -24,7 +27,7 @@ const Title = styled.p`
 const BasketButton = styled.button`
   background-color: transparent;
   border: none;
-  position: relative;
+  position: sticky;
 
   ${({ theme }) => theme.media.laptop} {
     display: none;

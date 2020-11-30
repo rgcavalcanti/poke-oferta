@@ -1,1 +1,1 @@
-export { default } from 'views/water/Index';
+export { default, getStaticProps } from "views/Water";

@@ -1,5 +1,4 @@
 import { usePokemon } from "contexts/pokemon";
-import { useEffect } from "react";
 import styled from "styled-components";
 import PokemonCard from "components/PokemonCard";
 
@@ -35,16 +34,8 @@ const List = styled.ul`
   }
 `;
 
-type Props = {
-  type: "normal" | "water";
-};
-
-const PokemonList: React.FC<Props> = ({ type }) => {
-  const { pokemonList, getPokemon } = usePokemon();
-
-  useEffect(() => {
-    getPokemon(type);
-  }, []);
+const PokemonList: React.FC = () => {
+  const { pokemonList} = usePokemon();
 
   return (
     <Wrapper>

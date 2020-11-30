@@ -1,10 +1,9 @@
-import { Pokemon } from "domain/entities/Pokemon";
-import { IndexPokemon } from "presenters/IndexPokemon";
+import { Pokemon, PokemonData } from "domain/entities/Pokemon";
 import { createContext, useContext, useState } from "react";
 
 interface PokemonContextData {
   pokemonList: Pokemon[];
-  getPokemon: (type: "normal" | "water") => void;
+  setPokemon: (pokemon: PokemonData[]) => void;
 }
 
 const PokemonContext = createContext<PokemonContextData>(
@@ -14,13 +13,12 @@ const PokemonContext = createContext<PokemonContextData>(
 export const PokemonProvider: React.FC = ({ children }) => {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
-  const getPokemon = async (type: "normal" | "water") => {
-    const pokemonData = await IndexPokemon({ type });
+  const setPokemon = async (pokemonData: PokemonData[]) => {
     setPokemonList(pokemonData.map((pokemon) => new Pokemon(pokemon)));
   };
 
   return (
-    <PokemonContext.Provider value={{ pokemonList, getPokemon }}>
+    <PokemonContext.Provider value={{ pokemonList, setPokemon }}>
       {children}
     </PokemonContext.Provider>
   );

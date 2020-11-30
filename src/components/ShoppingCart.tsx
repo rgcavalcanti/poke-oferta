@@ -18,6 +18,7 @@ const Cart = styled.aside<{ show: boolean }>`
   display: flex;
   flex-flow: column;
   padding-bottom: 3rem;
+  z-index: 200;
 
   ${({ theme }) => theme.media.laptop} {
     position: static;

@@ -1,1 +1,1 @@
-export { default } from 'views/normal/Index';
+export { default, getStaticProps } from "views/Normal";
