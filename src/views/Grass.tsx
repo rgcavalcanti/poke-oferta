@@ -1,4 +1,4 @@
-import NormalLayout from "layouts/NormalLayout";
+import GrassLayout from "layouts/GrassLayout";
 import styled from "styled-components";
 import PokemonList from "components/PokemonList";
 import ShoppingCart from "components/ShoppingCart";
@@ -31,7 +31,7 @@ function Index({
 }
 
 export const getStaticProps = async () => {
-  const pokemonData = await IndexPokemon({ type: "normal" });
+  const pokemonData = await IndexPokemon({ type: "grass" });
 
   return {
     props: {
@@ -41,6 +41,6 @@ export const getStaticProps = async () => {
   };
 };
 
-Index.Layout = NormalLayout;
+Index.Layout = GrassLayout;
 
 export default Index;

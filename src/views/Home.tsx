@@ -4,6 +4,7 @@ import styled from "styled-components";
 import normalTheme from "themes/normalTheme";
 import waterTheme from "themes/waterTheme";
 import fireTheme from "themes/fireTheme";
+import grassTheme from "themes/grassTheme";
 
 const Title = styled.h1`
   font-size: 1.5rem;
@@ -31,7 +32,7 @@ const TypesList = styled.ul`
 
 const Item = styled.li``;
 
-const PokemonType = styled.a<{ type: "normal" | "water" | "fire" }>`
+const PokemonType = styled.a<{ type: "normal" | "water" | "fire" | "grass" }>`
   text-decoration: none;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   ${({ type, theme }) => {
@@ -42,6 +43,8 @@ const PokemonType = styled.a<{ type: "normal" | "water" | "fire" }>`
         return `color: ${waterTheme.colors.main}`;
       case "fire":
         return `color: ${fireTheme.colors.main}`;
+      case "grass":
+        return `color: ${grassTheme.colors.main}`;
       default:
         return `color: ${theme.colors.main}`;
     }
@@ -64,6 +67,8 @@ const PokemonType = styled.a<{ type: "normal" | "water" | "fire" }>`
           return `background-color: ${waterTheme.colors.main}`;
         case "fire":
           return `background-color: ${fireTheme.colors.main}`;
+        case "grass":
+          return `background-color: ${grassTheme.colors.main}`;
         default:
           return `background-color: ${theme.colors.main}`;
       }
@@ -100,6 +105,11 @@ const Index: React.FC = () => {
         <Item>
           <Link href="/fogo" passHref>
             <PokemonType type="fire">Fogo</PokemonType>
+          </Link>
+        </Item>
+        <Item>
+          <Link href="/grama" passHref>
+            <PokemonType type="grass">Grama</PokemonType>
           </Link>
         </Item>
       </TypesList>

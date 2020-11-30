@@ -2,16 +2,17 @@ import { DefaultTheme } from "styled-components"
 
 import defaultTheme from 'themes/defaultTheme';
 
-const waterTheme: DefaultTheme = {
+const grassTheme: DefaultTheme = {
   ...defaultTheme,
   colors: {
     ...defaultTheme.colors,
-    main: '#488fd5',
-    secondary: '#e9ebf8',
+    main: '#295135',
+    secondary: '#edf6f9',
     white: '#fefffe',
     black: '#242325',
-    contrast: '#e3655b',
+    contrast: '#067bc2',
+    disabled: '#e5e7e6'
   }
 }
 
-export default waterTheme;
+export default grassTheme;

@@ -1,7 +1,7 @@
 import { HTTPGetClient } from "data/protocols/HTTPGetClient";
 
 export type IndexPokemonParams = {
-  type: 'normal' | 'water' | 'fire'
+  type: 'normal' | 'water' | 'fire' | 'grass'
 }
 
 export default class IndexPokemonUseCase<R> {

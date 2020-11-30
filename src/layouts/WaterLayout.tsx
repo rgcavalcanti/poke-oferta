@@ -5,7 +5,7 @@ import Head from "next/head";
 import { CartProvider } from "contexts/cart";
 import { PokemonProvider } from "contexts/pokemon";
 
-const NormalLayout: React.FC = ({ children }) => {
+const WaterLayout: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={waterTheme}>
       <Head>
@@ -25,4 +25,4 @@ const NormalLayout: React.FC = ({ children }) => {
   );
 };
 
-export default NormalLayout;
+export default WaterLayout;

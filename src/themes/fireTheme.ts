@@ -7,9 +7,9 @@ const fireTheme: DefaultTheme = {
   colors: {
     ...defaultTheme.colors,
     main: '#ad2e24',
-    secondary: '#f3eec3',
+    secondary: '#fbfff1',
     white: '#fefffe',
-    black: '#242325',
+    black: '#330a0c',
     contrast: '#ea8c55',
   }
 }

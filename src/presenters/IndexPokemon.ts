@@ -5,7 +5,8 @@ import { AxiosHttpGetClient } from "infra/AxiosHttpGetClient";
 enum Types {
   normal = 1,
   water = 11,
-  fire = 10
+  fire = 10,
+  grass = 12
 }
 
 type Response = {

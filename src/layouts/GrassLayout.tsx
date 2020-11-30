@@ -1,13 +1,13 @@
 import { ThemeProvider } from "styled-components";
 import Header from "components/Header";
-import fireTheme from "themes/fireTheme";
+import grassTheme from "themes/grassTheme";
 import Head from "next/head";
 import { CartProvider } from "contexts/cart";
 import { PokemonProvider } from "contexts/pokemon";
 
-const FireLayout: React.FC = ({ children }) => {
+const GrassLayout: React.FC = ({ children }) => {
   return (
-    <ThemeProvider theme={fireTheme}>
+    <ThemeProvider theme={grassTheme}>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -17,7 +17,7 @@ const FireLayout: React.FC = ({ children }) => {
       </Head>
       <PokemonProvider>
         <CartProvider>
-          <Header>Poke Oferta - Fogo</Header>
+          <Header>Poke Oferta - Grama</Header>
           {children}
         </CartProvider>
       </PokemonProvider>
@@ -25,4 +25,4 @@ const FireLayout: React.FC = ({ children }) => {
   );
 };
 
-export default FireLayout;
+export default GrassLayout;
