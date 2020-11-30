@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import normalTheme from "themes/normalTheme";
 import waterTheme from "themes/waterTheme";
+import fireTheme from "themes/fireTheme";
 
 const Title = styled.h1`
   font-size: 1.5rem;
@@ -30,7 +31,7 @@ const TypesList = styled.ul`
 
 const Item = styled.li``;
 
-const PokemonType = styled.a<{ type: "normal" | "water" }>`
+const PokemonType = styled.a<{ type: "normal" | "water" | "fire" }>`
   text-decoration: none;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   ${({ type, theme }) => {
@@ -39,6 +40,8 @@ const PokemonType = styled.a<{ type: "normal" | "water" }>`
         return `color: ${normalTheme.colors.main}`;
       case "water":
         return `color: ${waterTheme.colors.main}`;
+      case "fire":
+        return `color: ${fireTheme.colors.main}`;
       default:
         return `color: ${theme.colors.main}`;
     }
@@ -51,18 +54,20 @@ const PokemonType = styled.a<{ type: "normal" | "water" }>`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
 
     ${({ type, theme }) => {
-    switch (type) {
-      case "normal":
-        return `background-color: ${normalTheme.colors.main}`;
-      case "water":
-        return `background-color: ${waterTheme.colors.main}`;
-      default:
-        return `background-color: ${theme.colors.main}`;
-    }
-  }};
+      switch (type) {
+        case "normal":
+          return `background-color: ${normalTheme.colors.main}`;
+        case "water":
+          return `background-color: ${waterTheme.colors.main}`;
+        case "fire":
+          return `background-color: ${fireTheme.colors.main}`;
+        default:
+          return `background-color: ${theme.colors.main}`;
+      }
+    }};
   }
 
   ${({ theme }) => theme.media.tablet} {
@@ -90,6 +95,11 @@ const Index: React.FC = () => {
         <Item>
           <Link href="/agua" passHref>
             <PokemonType type="water">Água</PokemonType>
+          </Link>
+        </Item>
+        <Item>
+          <Link href="/fogo" passHref>
+            <PokemonType type="fire">Fogo</PokemonType>
           </Link>
         </Item>
       </TypesList>
