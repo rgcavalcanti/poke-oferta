@@ -1,28 +1,43 @@
-# TypeScript & Styled Components Next.js example
+# Poke Oferta
 
-This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
+O Poke Oferta se trata de uma loja virtual de pokémon utilizando os dados da [PokéAPI](https://pokeapi.co/) construída com Next.js e Typescript.
 
-## Deploy your own
+## Como rodar o projeto?
 
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Para rodar o projeto é necessário instalar as dependências com [npm](https://docs.npmjs.com/cli/init) ou [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) como mostrado abaixo:
 
 ```bash
-npx create-next-app --example with-typescript-styled-components with-typescript-styled-components
+npm install
+npm run build
+npm start
 # or
-yarn create next-app --example with-typescript-styled-components with-typescript-styled-components
+yarn install
+yarn build
+yarn start
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Estrutura do projeto
 
-## Notes
+Para estruturar a lógica das páginas, o projeto foi construído com conceitos de Clean Architecture, tornando assim o projeto mais simples de realizar manutenções e facilitando a criação de testes unitários em cima da lógica do negócio.
 
-This is an amalgamation of the 2 existing examples:
+O Projeto ficou com a seguinte estrutura:
 
-- [with-typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-- [with-styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
+    ├─ pages  -> rotas da aplicação 
+    ├─ public -> arquivos públicos acessíveis através de '/'
+    ├─ src
+    │   ├─ components   -> componentes da aplicação
+    │   ├─ config       -> configurações globais do projeto
+    │   ├─ contexts     -> contextos de estados globais da aplicação
+    │   ├─ data         -> camada de tratamento de dados externos
+    │   ├─ declarations -> definição de módulos do typescript
+    │   ├─ domain       -> arquivos do domínio da aplicação 
+    │   │   ├─ entities -> entidades da aplicação
+    │   │   └─ usecases -> casos de uso da aplicação               
+    │   ├─ helpers      -> utilitários comuns do projeto
+    │   ├─ icons        -> ícones SVG
+    │   ├─ infra        -> camada que faz a implementação dos contratos de 'data'
+    │   ├─ layouts      -> layouts da aplicação
+    │   ├─ presenters   -> camada que conecta as camadas para utilização nas telas
+    │   ├─ themes       -> temas da aplicação
+    │   └─ views        -> componentes das páginas da aplicação
+    └── ...
