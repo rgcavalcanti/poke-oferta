@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
           content="Acesse agora o maior e-commecerce para compra e venda de pokemón!"
         />
         <meta
-          property="og:image"
+          property="og:image:secure"
           content="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
         />
 
