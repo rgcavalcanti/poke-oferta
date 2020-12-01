@@ -27,5 +27,5 @@ export default function SearchBar() {
     filter(event.target.value);
   };
 
-  return <SearchInput onChange={handleSearch} placeholder="Buscar pokémon" />;
+  return <SearchInput onChange={handleSearch} placeholder="Buscar pokémon" aria-label="buscar pokémon"/>;
 }

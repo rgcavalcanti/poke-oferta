@@ -79,7 +79,7 @@ const Header: React.FC = ({ children }) => {
       </Link>
       {pokemonList && <SearchBar />}
       {toggleCart && (
-        <BasketButton onClick={toggleCart}>
+        <BasketButton aria-label="Abrir carrinho" onClick={toggleCart}>
           {cart.totalQuantity() > 0 && (
             <TotalCount>
               {cart.totalQuantity() > 9 ? "+9" : cart.totalQuantity()}

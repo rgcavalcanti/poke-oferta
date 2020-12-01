@@ -89,6 +89,7 @@ const Index: React.FC = () => {
         width="300"
         height="300"
         layout="fixed"
+        alt="pikachu"
       />
       <Title>Que tipo de Pokemón você procura?</Title>
       <TypesList>

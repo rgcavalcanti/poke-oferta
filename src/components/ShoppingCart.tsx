@@ -116,7 +116,7 @@ const ShoppingCart: React.FC = () => {
       )}
       <Cart show={showCart}>
         <Title>Carrinho</Title>
-        <Close onClick={toggleCart}>
+        <Close onClick={toggleCart} aria-label="Fechar carrinho">
           <Image src="/images/icon_close.svg" width="32" height="32" />
         </Close>
         <CartList />
