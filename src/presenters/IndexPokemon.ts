@@ -26,6 +26,6 @@ export const IndexPokemon = async (params: IndexPokemonParams): Promise<PokemonD
     id: Number(pokemon.url.match(/pokemon\/(.*)\//)?.[1] ?? 0),
     name: pokemon.name,
     photo: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.url.match(/pokemon\/(.*)\//)?.[1] ?? 0}.png`,
-    price: (Math.floor(Math.random() * 10) + 1) * 1000
+    price: (Math.floor(Math.random() * 30) + 1) * 100
   }))
 }
