@@ -1,6 +1,6 @@
 # Poke Oferta
 
-O Poke Oferta se trata de uma loja virtual de pokémon utilizando os dados da [PokéAPI](https://pokeapi.co/) construída com Next.js e Typescript.
+O Poke Oferta se trata de uma loja virtual de pokémon utilizando os dados da [PokéAPI](https://pokeapi.co/) construída com Next.js e Typescript. Você pode acessar através [desse link](http://poke-oferta.vercel.app/)
 
 ## Como rodar o projeto?
 
