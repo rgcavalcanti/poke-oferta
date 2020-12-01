@@ -5,7 +5,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const Backdrop = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   bottom: 0;
@@ -17,7 +17,7 @@ const Backdrop = styled.div`
 `;
 
 const Modal = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 2000;
   top: 50%;
   left: 50%;
