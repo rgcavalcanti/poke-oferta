@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
       <Head>
         {/* HTML Tags */}
         <title>Poke Oferta</title>
+        <meta name="title" content="Poke Oferta" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" href="images/favicon.ico" />
         <meta
