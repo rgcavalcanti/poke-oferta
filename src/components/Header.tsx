@@ -8,7 +8,7 @@ import SearchBar from "./SearchBar";
 
 const Bar = styled.header<{ hasSearch: boolean }>`
   background-color: ${({ theme }) => theme.colors.main};
-  padding: 0 1rem 1rem;
+  padding: 1rem;
   height: ${({ hasSearch }) => (hasSearch ? "120px" : "60px")};
   display: flex;
   align-items: center;
