@@ -1,3 +1,5 @@
+import { usePokemon } from "contexts/pokemon";
+import { ChangeEvent } from "react";
 import styled from "styled-components";
 
 const SearchInput = styled.input.attrs({
@@ -13,11 +15,17 @@ const SearchInput = styled.input.attrs({
   outline: none;
 
   ${({ theme }) => theme.media.tablet} {
-  max-width: ${({theme}) => theme.device.sizes.mobileL};
+    max-width: ${({ theme }) => theme.device.sizes.mobileL};
     order: initial;
   }
 `;
 
 export default function SearchBar() {
-  return <SearchInput placeholder="Buscar pokémon" />;
+  const { filter } = usePokemon();
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    filter(event.target.value);
+  };
+
+  return <SearchInput onChange={handleSearch} placeholder="Buscar pokémon" />;
 }

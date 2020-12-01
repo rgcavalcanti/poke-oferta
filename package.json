@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "fuse.js": "^6.4.3",
     "next": "latest",
     "normalize.css": "^8.0.1",
     "react": "^16.13.0",

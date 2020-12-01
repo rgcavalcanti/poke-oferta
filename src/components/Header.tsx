@@ -77,7 +77,7 @@ const Header: React.FC = ({ children }) => {
       <Link href="/">
         <Title>{children}</Title>
       </Link>
-      {pokemonList && pokemonList.length > 0 && <SearchBar />}
+      {pokemonList && <SearchBar />}
       {toggleCart && (
         <BasketButton onClick={toggleCart}>
           {cart.totalQuantity() > 0 && (
