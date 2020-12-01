@@ -19,11 +19,12 @@ const Cart = styled.aside<{ show: boolean }>`
   flex-flow: column;
   padding-bottom: 3rem;
   z-index: 200;
+  overflow: auto;
 
   ${({ theme }) => theme.media.laptop} {
     position: static;
     transform: none;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
     max-width: 400px;
   }
 `;

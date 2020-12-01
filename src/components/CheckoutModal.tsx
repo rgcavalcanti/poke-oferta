@@ -100,7 +100,7 @@ const CheckoutModal: React.FC<Props> = ({ onClose }) => {
         <Title>Obrigado!</Title>
         <Image width="150" height="150" src="/images/pokemon_coin.png" />
         <Text>
-          Temos que pegar todos eles! Pensando nisso a Poke Orferta está te
+          Temos que pegar todos eles! Pensando nisso a Poke Oferta está te
           devolvendo parte do valor para você poder comprar mais pokémon e se
           tornar um grande mestre.
         </Text>

@@ -3,17 +3,29 @@ import Link from "next/link";
 import styled from "styled-components";
 
 import BasketIcon from "icons/icon_shopping_basket.svg";
+import { usePokemon } from "contexts/pokemon";
+import SearchBar from "./SearchBar";
 
-const Bar = styled.header`
+const Bar = styled.header<{ hasSearch: boolean }>`
   background-color: ${({ theme }) => theme.colors.main};
-  padding: 0 1rem;
-  height: 120px;
+  padding: 0 1rem 1rem;
+  height: ${({ hasSearch }) => (hasSearch ? "120px" : "60px")};
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top: -60px;
+  top: -52px;
   z-index: 100;
+  flex-wrap: wrap;
+
+  ${({ theme }) => theme.media.tablet} {
+    flex-wrap: nowrap;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    align-items: center;
+  }
 `;
 
 const Title = styled.p`
@@ -22,12 +34,14 @@ const Title = styled.p`
   font-size: 1.25rem;
   font-weight: 500;
   cursor: pointer;
+  margin: 0;
 `;
 
 const BasketButton = styled.button`
   background-color: transparent;
   border: none;
   position: sticky;
+  top: 1rem;
 
   ${({ theme }) => theme.media.laptop} {
     display: none;
@@ -56,12 +70,14 @@ const TotalCount = styled.span`
 
 const Header: React.FC = ({ children }) => {
   const { toggleCart, cart } = useCart();
+  const { pokemonList } = usePokemon();
 
   return (
-    <Bar>
+    <Bar hasSearch={!!pokemonList}>
       <Link href="/">
         <Title>{children}</Title>
       </Link>
+      {pokemonList && pokemonList.length > 0 && <SearchBar />}
       {toggleCart && (
         <BasketButton onClick={toggleCart}>
           {cart.totalQuantity() > 0 && (

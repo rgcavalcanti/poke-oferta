@@ -5,7 +5,6 @@ import CartItem from "components/CartItem";
 const List = styled.ul`
   list-style: none;
   padding: 1rem;
-  overflow: auto;
   margin: 0;
   flex: 1;
 `;

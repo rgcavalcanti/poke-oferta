@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.laptop} {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
     overflow: auto;
   }
 `;
